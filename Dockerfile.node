@@ -1,0 +1,5 @@
+FROM node:lts-alpine
+
+COPY node_server.ts node_server.ts
+
+CMD ["node", "node_server.ts"]

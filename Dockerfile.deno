@@ -1,0 +1,7 @@
+FROM denoland/deno:alpine
+
+COPY deno_server.ts deno_server.ts
+RUN deno cache deno_server.ts
+RUN deno compile --allow-net deno_server.ts
+
+CMD ["./deno_server"]

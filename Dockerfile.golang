@@ -1,0 +1,7 @@
+FROM golang:1.18-stretch
+
+COPY main.go main.go
+
+RUN go build -ldflags "-s -w" -o /golang_server ./main.go
+
+CMD ["/golang_server"]
